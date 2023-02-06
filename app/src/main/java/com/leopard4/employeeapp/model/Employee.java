@@ -1,6 +1,8 @@
 package com.leopard4.employeeapp.model;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
     //        "id": 3,
 //        "employee_name": "Ashton Cox",
 //        "employee_salary": 86000,
@@ -14,6 +16,13 @@ public class Employee {
 
     public Employee() {
     }
+
+    public Employee(String name, int salary, int age) {
+        id = -1;
+        this.name = name;
+        this.salary = salary;
+        this.age = age;
+    }
     public Employee(int id, String name, int salary, int age, String image) {
         this.id = id;
         this.name = name;
@@ -21,12 +30,6 @@ public class Employee {
         this.age = age;
         this.image = image;
 
-    }
-
-    public Employee(String name, int age, int salary) {
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
     }
 }
 
